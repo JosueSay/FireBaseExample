@@ -1,18 +1,17 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-
     id("com.google.gms.google-services")
 }
 
 android {
     namespace = "edu.uvg.com.example.examplefbcars"
-    compileSdk = 33
+    compileSdk = 34  // Actualiza la versión del compileSdk a 34 o superior.
 
     defaultConfig {
         applicationId = "edu.uvg.com.example.examplefbcars"
         minSdk = 28
-        targetSdk = 33
+        targetSdk = 34  // Actualiza la versión del targetSdk a 34 o superior.
         versionCode = 1
         versionName = "1.0"
 
@@ -38,15 +37,14 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
     // Dependencias FB
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-database-ktx")
-
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

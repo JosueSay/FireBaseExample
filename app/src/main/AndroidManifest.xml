@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExampleFBCars"
         tools:targetApi="31">
+
+        <activity
+            android:name=".FetchingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".InsertionActivity"
+            android:exported="false" />
+
         <activity
             android:name=".CarDetails"
             android:exported="false" />

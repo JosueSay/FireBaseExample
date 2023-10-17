@@ -58,13 +58,13 @@ class CarDetails : AppCompatActivity() {
     }
 
     private fun setValuesToViews() {
-        tvCarId.text = intent.getStringExtra("empId")
-        tvCarBrand.text = intent.getStringExtra("empMarca")
-        tvCarModel.text = intent.getStringExtra("empModelo")
-        tvCarYear.text = intent.getStringExtra("empAnio")
-        tvCarColor.text = intent.getStringExtra("empColor")
-        tvFuelr.text = intent.getStringExtra("empTipoDeCombustible")
-        tvCarPrice.text = intent.getStringExtra("empPrecio")
+        tvCarId.text = intent.getStringExtra("carId")
+        tvCarBrand.text = intent.getStringExtra("carMarca")
+        tvCarModel.text = intent.getStringExtra("carModelo")
+        tvCarYear.text = intent.getStringExtra("carAge")
+        tvCarColor.text = intent.getStringExtra("carColor")
+        tvFuelr.text = intent.getStringExtra("carTipoDeCombustible")
+        tvCarPrice.text = intent.getStringExtra("carPrecio")
 
     }
 
@@ -104,12 +104,12 @@ class CarDetails : AppCompatActivity() {
 
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
-        etCarBrand.setText(intent.getStringExtra("empMarca").toString())
-        etCarModel.setText(intent.getStringExtra("empModelo").toString())
-        etCarYear.setText(intent.getStringExtra("empAnio").toString())
-        etCarColor.setText(intent.getStringExtra("empColor").toString())
-        etCarCombus.setText(intent.getStringExtra("empTipoDeCombustible").toString())
-        etPrecio.setText(intent.getStringExtra("empPrecio").toString())
+        etCarBrand.setText(intent.getStringExtra("carMarca").toString())
+        etCarModel.setText(intent.getStringExtra("carModelo").toString())
+        etCarYear.setText(intent.getStringExtra("carAge").toString())
+        etCarColor.setText(intent.getStringExtra("carColor").toString())
+        etCarCombus.setText(intent.getStringExtra("carTipoDeCombustible").toString())
+        etPrecio.setText(intent.getStringExtra("carPrecio").toString())
 
         mDialog.setTitle("Updating $empName Record")
 

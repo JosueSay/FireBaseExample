@@ -16,43 +16,43 @@ import com.google.firebase.database.ValueEventListener
 
 class FetchingActivity : AppCompatActivity() {
 
-    private lateinit var empRecyclerView: RecyclerView
+    private lateinit var carRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-    private lateinit var empList: ArrayList<CarModel>
+    private lateinit var carList: ArrayList<CarModel>
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fetching)
 
-        empRecyclerView = findViewById(R.id.rvEmp)
-        empRecyclerView.layoutManager = LinearLayoutManager(this)
-        empRecyclerView.setHasFixedSize(true)
+        carRecyclerView = findViewById(R.id.rvCar)
+        carRecyclerView.layoutManager = LinearLayoutManager(this)
+        carRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
 
-        empList = arrayListOf<CarModel>()
+        carList = arrayListOf<CarModel>()
 
-        getEmployeesData()
+        getCarsData()
 
     }
 
-    private fun getEmployeesData() {
+    private fun getCarsData() {
 
-        empRecyclerView.visibility = View.GONE
+        carRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Employees")
+        dbRef = FirebaseDatabase.getInstance().getReference("Carros")
 
         dbRef.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                empList.clear()
+                carList.clear()
                 if (snapshot.exists()){
                     for (empSnap in snapshot.children){
                         val empData = empSnap.getValue(CarModel::class.java)
-                        empList.add(empData!!)
+                        carList.add(empData!!)
                     }
-                    val mAdapter = CarAdapter(empList)
-                    empRecyclerView.adapter = mAdapter
+                    val mAdapter = CarAdapter(carList)
+                    carRecyclerView.adapter = mAdapter
 
                     mAdapter.setOnItemClickListener(object : CarAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
@@ -60,18 +60,18 @@ class FetchingActivity : AppCompatActivity() {
                             val intent = Intent(this@FetchingActivity, CarDetails::class.java)
 
                             //put extras
-                            intent.putExtra("empMarca", empList[position].marca)
-                            intent.putExtra("empModelo", empList[position].modelo)
-                            intent.putExtra("empAnio", empList[position].año)
-                            intent.putExtra("empColor", empList[position].color)
-                            intent.putExtra("empTipoDeCombustible", empList[position].tipoDeCombustible)
-                            intent.putExtra("empPrecio", empList[position].precio)
+                            intent.putExtra("carMarca", carList[position].marca)
+                            intent.putExtra("carModelo", carList[position].modelo)
+                            intent.putExtra("carAge", carList[position].año)
+                            intent.putExtra("carColor", carList[position].color)
+                            intent.putExtra("carTipoDeCombustible", carList[position].tipoDeCombustible)
+                            intent.putExtra("carPrecio", carList[position].precio)
                             startActivity(intent)
                         }
 
                     })
 
-                    empRecyclerView.visibility = View.VISIBLE
+                    carRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
             }
