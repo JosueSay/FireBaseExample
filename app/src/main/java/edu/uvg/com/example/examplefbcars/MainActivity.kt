@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        //btnInsertData = findViewById(R.id.btnInsertData)
-        //btnFetchData = findViewById(R.id.btnFetchData)
+        btnInsertData = findViewById(R.id.btnInsertData)
+        btnFetchData = findViewById(R.id.btnFetchData)
 
         btnInsertData.setOnClickListener {
             val intent = Intent(this, InsertionActivity::class.java)

@@ -51,13 +51,13 @@ class FetchingActivity : AppCompatActivity() {
                         val empData = empSnap.getValue(CarModel::class.java)
                         empList.add(empData!!)
                     }
-                    val mAdapter = EmpAdapter(empList)
+                    val mAdapter = CarAdapter(empList)
                     empRecyclerView.adapter = mAdapter
 
-                    mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener{
+                    mAdapter.setOnItemClickListener(object : CarAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
 
-                            val intent = Intent(this@FetchingActivity, CarDetailsActivity::class.java)
+                            val intent = Intent(this@FetchingActivity, CarDetails::class.java)
 
                             //put extras
                             intent.putExtra("empMarca", empList[position].marca)
