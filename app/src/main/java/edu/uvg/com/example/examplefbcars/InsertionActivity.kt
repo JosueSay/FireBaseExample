@@ -3,6 +3,7 @@ package edu.uvg.com.example.examplefbcars
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -34,7 +35,7 @@ class InsertionActivity : AppCompatActivity() {
         // Botón de guardardo
         btnSaveData = findViewById(R.id.btnSave)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Employees")
+        dbRef = FirebaseDatabase.getInstance().getReference("Carros")
 
         btnSaveData.setOnClickListener {
             saveCarData()
@@ -51,38 +52,39 @@ class InsertionActivity : AppCompatActivity() {
         val carCombustible = etCarCombustible.text.toString()
         val carPrecio = etCarPrecio.text.toString()
 
+
         if (carMarca.isEmpty()) {
             etCarMarca.error = "Please enter name"
         }
-        if (empAge.isEmpty()) {
+        if (carModel.isEmpty()) {
             etCarModelo.error = "Please enter age"
         }
-        if (empSalary.isEmpty()) {
+        if (carAge.isEmpty()) {
             etCarAge.error = "Please enter salary"
         }
-        if (empName.isEmpty()) {
+        if (carColor.isEmpty()) {
             etCarColor.error = "Please enter name"
         }
-        if (empAge.isEmpty()) {
+        if (carCombustible.isEmpty()) {
             etCarCombustible.error = "Please enter age"
         }
-        if (empSalary.isEmpty()) {
+        if (carPrecio.isEmpty()) {
             etCarPrecio.error = "Please enter salary"
         }
 
-
         val carId = dbRef.push().key!!
+        val carro = CarModel(carId, carMarca, carModel, carAge.toInt(), carColor, carCombustible, carPrecio.toDouble())
 
-        val employee = CarModel(empId, empName, empAge, empSalary)
-
-        dbRef.child(empId).setValue(employee)
+        dbRef.child(carId).setValue(carro)
             .addOnCompleteListener {
                 Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
-                etEmpName.text.clear()
-                etEmpAge.text.clear()
-                etEmpSalary.text.clear()
-
+                etCarMarca.text.clear()
+                etCarModelo.text.clear()
+                etCarAge.text.clear()
+                etCarColor.text.clear()
+                etCarCombustible.text.clear()
+                etCarPrecio.text.clear()
 
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
