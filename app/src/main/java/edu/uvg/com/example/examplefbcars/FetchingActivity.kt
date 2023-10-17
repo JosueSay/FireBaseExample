@@ -60,11 +60,12 @@ class FetchingActivity : AppCompatActivity() {
                             val intent = Intent(this@FetchingActivity, CarDetailsActivity::class.java)
 
                             //put extras
-                            intent.putExtra("empId", empList[position].empId)
-                            intent.putExtra("empName", empList[position].empName)
-                            intent.putExtra("empModel", empList[position].empModel)
-                            intent.putExtra("empAge", empList[position].empAge)
-                            intent.putExtra("empColor", empList[position].empColor)
+                            intent.putExtra("empMarca", empList[position].marca)
+                            intent.putExtra("empModelo", empList[position].modelo)
+                            intent.putExtra("empAnio", empList[position].año)
+                            intent.putExtra("empColor", empList[position].color)
+                            intent.putExtra("empTipoDeCombustible", empList[position].tipoDeCombustible)
+                            intent.putExtra("empPrecio", empList[position].precio)
                             startActivity(intent)
                         }
 

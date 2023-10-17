@@ -8,40 +8,40 @@
     tools:context=".activities.InsertionActivity">
 
     <EditText
-        android:id="@+id/etEmpName"
+        android:id="@+id/etEmpMarca"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Enter Car Name"
+        android:hint="Ingresa la marca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etEmpModel"
+        android:id="@+id/etEmpModelo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Enter Car Model"
+        android:hint="Ingresa el modelo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmpName" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmpMarca" />
 
     <EditText
-        android:id="@+id/etEmpAge"
+        android:id="@+id/etEmpAnio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Enter Car Age"
+        android:hint="Ingresa el año"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmpModel" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmpModelo" />
 
     <EditText
         android:id="@+id/etEmpColor"
@@ -50,10 +50,36 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Enter Car Color"
+        android:hint="Ingresa el color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmpAge" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmpAnio" />
+
+
+    <EditText
+        android:id="@+id/etEmpTipoDeCombustible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresa el tipo de combustible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmpColor" />
+
+
+    <EditText
+        android:id="@+id/etEmpPrecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ingresa el precio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmpTipoDeCombustible" />
 
     <Button
         android:id="@+id/btnSave"
