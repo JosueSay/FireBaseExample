@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "598865329795",
+    "firebase_url": "https://ejemplo-fb-uvg-default-rtdb.firebaseio.com",
+    "project_id": "ejemplo-fb-uvg",
+    "storage_bucket": "ejemplo-fb-uvg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598865329795:android:a177232d135bf1772fe5b6",
+        "android_client_info": {
+          "package_name": "edu.uvg.com.example.examplefbcars"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyVwRVFjbmZCgO4uC77Qv1wqCj-mCC2GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
