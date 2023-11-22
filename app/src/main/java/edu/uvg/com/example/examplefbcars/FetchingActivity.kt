@@ -2,6 +2,7 @@ package edu.uvg.com.example.examplefbcars
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -48,7 +49,9 @@ class FetchingActivity : AppCompatActivity() {
                 carList.clear()
                 if (snapshot.exists()){
                     for (empSnap in snapshot.children){
+
                         val empData = empSnap.getValue(CarModel::class.java)
+                        Log.d("empSnap", empData!!.año.toString())
                         carList.add(empData!!)
                     }
                     val mAdapter = CarAdapter(carList)
