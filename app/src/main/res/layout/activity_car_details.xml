@@ -62,7 +62,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Car ID"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp" />
 
             </LinearLayout>
@@ -79,7 +79,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />
@@ -111,7 +111,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Car Brand"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp" />
 
             </LinearLayout>
@@ -128,7 +128,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />
@@ -161,7 +161,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Car Model"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
 
@@ -181,7 +181,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />
@@ -216,7 +216,7 @@
 
                     android:gravity="center"
                     android:text="Emp Year"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
 
@@ -236,7 +236,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />
@@ -269,7 +269,7 @@
 
                     android:gravity="center"
                     android:text="Car Color"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
 
@@ -289,7 +289,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />
@@ -323,7 +323,7 @@
 
                     android:gravity="center"
                     android:text="Fuel Type"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
 
@@ -343,7 +343,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />
@@ -376,7 +376,7 @@
 
                     android:gravity="center"
                     android:text="Car Price"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
 
@@ -396,7 +396,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
 
                     />

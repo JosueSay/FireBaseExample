@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -31,14 +32,14 @@ class CarDetails : AppCompatActivity() {
 
         btnUpdate.setOnClickListener {
             openUpdateDialog(
-                intent.getStringExtra("empId").toString(),
-                intent.getStringExtra("empMarca").toString()
+                intent.getStringExtra("carId").toString(),
+                intent.getStringExtra("carMarca").toString()
             )
         }
 
         btnDelete.setOnClickListener {
             deleteRecord(
-                intent.getStringExtra("empId").toString()
+                intent.getStringExtra("carId").toString()
             )
         }
 
@@ -61,7 +62,7 @@ class CarDetails : AppCompatActivity() {
         tvCarId.text = intent.getStringExtra("carId")
         tvCarBrand.text = intent.getStringExtra("carMarca")
         tvCarModel.text = intent.getStringExtra("carModelo")
-        tvCarYear.text = intent.getStringExtra("carAge")
+        tvCarYear.text = intent.getStringExtra("carAge").toString()
         tvCarColor.text = intent.getStringExtra("carColor")
         tvFuelr.text = intent.getStringExtra("carTipoDeCombustible")
         tvCarPrice.text = intent.getStringExtra("carPrecio")
@@ -71,6 +72,7 @@ class CarDetails : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
+        Log.d("Mi ID a quitar es",id)
         val dbRef = FirebaseDatabase.getInstance().getReference("Carros").child(id)
         val mTask = dbRef.removeValue()
 
